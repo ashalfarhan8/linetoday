@@ -1,6 +1,4 @@
-import React from "react";
 import { Tab, Tabs, Container } from "react-bootstrap";
-import Carousel from "./Carousel";
 import Section from "./Section";
 
 export default function Groups({ categories }) {
@@ -17,6 +15,13 @@ export default function Groups({ categories }) {
               >
                 {category?.templates
                   .filter((template) => template.type !== 73)
+                  .filter((template) =>
+                    template.sections.map((section) =>
+                      section.articles.map(
+                        (article) => article.status === "AVAILABLE"
+                      )
+                    )
+                  )
                   .map((template) => {
                     if (template.title) {
                       return <Section template={template} key={template.id} />;
@@ -29,14 +34,4 @@ export default function Groups({ categories }) {
       </Container>
     </div>
   );
-}
-
-{
-  /* <div>
-  <Carousel
-    articles={templates.map(
-      (template) => template.sections[0].articles
-    )}
-  />
-</div> */
 }
