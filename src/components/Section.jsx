@@ -21,7 +21,7 @@ export default function Section({ template, key }) {
         {template.sections &&
           template.sections.map((section) => {
             if (section.articles) {
-              return section.articles.map((article) => {
+              return section.articles.slice(0, 6).map((article) => {
                 return <Card article={article} key={article.id} />;
               });
             }
