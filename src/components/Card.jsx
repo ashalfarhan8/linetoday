@@ -11,12 +11,10 @@ export default function CardSection({ article }) {
       />
       <Card.Body className="flex flex-col justify-between">
         <div>
-          <p className="text-sm md:text-md font-medium overflow-clip">
-            {article.title}
-          </p>
+          <p className="text-sm md:text-lg font-medium">{article.title}</p>
           <a
             href={article.publisherImageCdnHash}
-            className="text-black no-underline text-sm hover:no-underline hover:text-green-800"
+            className="text-black no-underline text-sm hover:no-underline hover:text-green-800 cursor-pointer"
           >
             {article.publisher}
           </a>
