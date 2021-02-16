@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Groups({ categories }) {
   return (
-    <div className="sticky top-0">
+    <div>
       <Container>
         <Tabs defaultActiveKey="top" id="uncontrolled-tab-example">
           {categories.map((category) => {

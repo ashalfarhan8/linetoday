@@ -5,12 +5,16 @@ export default function Header() {
   return (
     <header className="py-2">
       <Container>
-        <div className="flex justify-between items-center">
-          <h3 className="font-montserrat uppercase">Line Today</h3>
-          <Link href="/">
-            <a className="text-black font-montserrat uppercase">Masuk</a>
-          </Link>
-        </div>
+        <Row>
+          <Col xs={9} sm={10} md={11}>
+            <h3 className="font-montserrat uppercase">Line Today</h3>
+          </Col>
+          <Col xs={3} sm={2} md={1}>
+            <Link href="/">
+              <a className="text-black font-montserrat uppercase">Masuk</a>
+            </Link>
+          </Col>
+        </Row>
       </Container>
     </header>
   );

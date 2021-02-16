@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Card from "./Card";
+
 export default function Section({ template, key }) {
   return (
     <div key={key} className="mb-24 mt-2">
